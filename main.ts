@@ -1,3 +1,6 @@
+input.onPinPressed(TouchPin.P0, function () {
+    game.resume()
+})
 input.onButtonPressed(Button.A, function () {
     pic_1_player.change(LedSpriteProperty.X, 1)
 })
@@ -8,12 +11,7 @@ input.onButtonPressed(Button.B, function () {
     pic_1_player.change(LedSpriteProperty.X, -1)
 })
 input.onPinPressed(TouchPin.P1, function () {
-    if (game.isRunning()) {
-        game.pause()
-    }
-    if (game.isPaused()) {
-        game.resume()
-    }
+    game.pause()
 })
 input.onGesture(Gesture.Shake, function () {
     control.reset()
